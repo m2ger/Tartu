@@ -1,0 +1,1574 @@
+				;
+				;	Disassembled by:
+				;		DASMx object code disassembler
+				;		(c) Copyright 1996-1999   Conquest Consultants
+				;		Version 1.30 (Oct  6 1999)
+				;
+				;	File:		PE8.bin
+				;
+				;	Size:		2048 bytes
+				;	Checksum:	5893
+				;	CRC-32:		9F122197
+				;
+				;	Date:		Tue Apr 04 21:27:57 2023
+				;
+				;	CPU:		Intel 8080 (MCS-80/85 family)
+				;
+				;
+				;
+					org	0E800H
+				;
+E800 : CD C0 E2 	"   "		call	LE2C0
+E803 : CD 00 E4 	"   "		call	LE400
+E806 : F1 		" "		pop	psw
+E807 : C1 		" "		pop	b
+E808 : D1 		" "		pop	d
+E809 : F5 		" "		push	psw
+E80A : CD CC E2 	"   "		call	LE2CC
+E80D : CD 2F E5 	" / "		call	LE52F
+E810 : 21 1E E8 	"!  "		lxi	h,0E81EH
+E813 : CD 4E E8 	" N "		call	LE84E
+E816 : 11 00 00 	"   "		lxi	d,L0000
+E819 : C1 		" "		pop	b
+E81A : 4A 		"J"		mov	c,d
+E81B : C3 09 E4 	"   "		jmp	LE409
+				;
+E81E : 08 		" "		db	008H
+				;
+E81F : 40 		"@"		mov	b,b
+E820 : CD C0 E2 	"   "		call	LE2C0
+E823 : CD 00 E4 	"   "		call	LE400
+E826 : F1 		" "		pop	psw
+E827 : C1 		" "		pop	b
+E828 : D1 		" "		pop	d
+E829 : F5 		" "		push	psw
+E82A : CD CC E2 	"   "		call	LE2CC
+E82D : CD 2F E5 	" / "		call	LE52F
+E830 : AA 		" "		xra	d
+E831 : AA 		" "		xra	d
+E832 : 7E 		"~"		mov	a,m
+E833 : FF 		" "		rst	7
+E834 : FF 		" "		rst	7
+E835 : 7F 		" "		mov	a,a
+E836 : 7F 		" "		mov	a,a
+E837 : 00 		" "		nop
+E838 : 00 		" "		nop
+E839 : 80 		" "		add	b
+E83A : 81 		" "		add	c
+E83B : 00 		" "		nop
+E83C : 00 		" "		nop
+E83D : 00 		" "		nop
+E83E : 81 		" "		add	c
+E83F				LE83F:
+E83F : CD E5 21 	"  !"		call	L21E5
+E842 : EF 		" "		rst	5
+E843 : E8 		" "		rpe
+E844 : C3 3F E8 	" ? "		jmp	LE83F
+				;
+E847 : DB 0F 		"  "		in	00FH
+E849 : 49 		"I"		mov	c,c
+E84A : 81 		" "		add	c
+E84B : 00 		" "		nop
+E84C : 00 		" "		nop
+E84D : 00 		" "		nop
+E84E				LE84E:
+E84E : 7F 		" "		mov	a,a
+E84F : 05 		" "		dcr	b
+E850 : BA 		" "		cmp	d
+E851 : D7 		" "		rst	2
+E852 : 1E 86 		"  "		mvi	e,086H
+E854 : 64 		"d"		mov	h,h
+E855 : 26 99 		"& "		mvi	h,099H
+E857				LE857:
+E857 : 87 		" "		add	a
+E858 : 58 		"X"		mov	e,b
+E859 : 34 		"4"		inr	m
+E85A : 23 		"#"		inx	h
+E85B : 87 		" "		add	a
+E85C : E0 		" "		rpo
+E85D : 5D 		"]"		mov	e,l
+E85E : A5 		" "		ana	l
+E85F : 86 		" "		add	m
+E860 : E5 		" "		push	h
+E861 : 21 E4 E1 	"!  "		lxi	h,0E1E4H
+E864 : CD 55 E5 	" U "		call	LE555
+E867 : E5 		" "		push	h
+E868 : CD CF E2 	"   "		call	LE2CF
+E86B : E1 		" "		pop	h
+E86C : C3 57 E8 	" W "		jmp	LE857
+				;
+E86F : EF 		" "		rst	5
+E870 : FA 8C E8 	"   "		jm	LE88C
+E873 : 21 42 02 	"!B "		lxi	h,00242H
+E876 : CD 44 E5 	" D "		call	LE544
+E879 : C8 		" "		rz
+E87A : 01 35 98 	" 5 "		lxi	b,09835H
+E87D : 11 7A 44 	" zD"		lxi	d,0447AH
+E880 : CD C0 E2 	"   "		call	LE2C0
+E883 : CD 00 E4 	"   "		call	LE400
+E886 : F1 		" "		pop	psw
+E887 : C1 		" "		pop	b
+E888 : D1 		" "		pop	d
+E889 : F5 		" "		push	psw
+				;
+E88A : CD 		" "		db	0CDH
+E88B : CC 		" "		db	0CCH
+E88C				LE88C:
+E88C : E2 		" "		db	0E2H
+				;
+E88D : CD 2F E5 	" / "		call	LE52F
+E890 : 21 1E E8 	"!  "		lxi	h,0E81EH
+E893 : CD 4E E8 	" N "		call	LE84E
+E896 : 11 00 00 	"   "		lxi	d,L0000
+E899 : C1 		" "		pop	b
+E89A : 4A 		"J"		mov	c,d
+E89B : C3 09 E4 	"   "		jmp	LE409
+				;
+E89E : 08 		" "		db	008H
+				;
+E89F : 40 		"@"		mov	b,b
+				;
+E8A0 : CD 		" "		db	0CDH
+				;
+E8A1				LE8A1:
+E8A1 : C0 		" "		rnz
+E8A2 : E2 CD 00 	"   "		jpo	000CDH
+				;
+E8A5 : E4 		" "		db	0E4H
+				;
+E8A6 : F1 		" "		pop	psw
+E8A7				LE8A7:
+E8A7 : C1 		" "		pop	b
+E8A8 : D1 		" "		pop	d
+E8A9 : F5 		" "		push	psw
+E8AA : CD CC E2 	"   "		call	LE2CC
+E8AD : CD 2F E5 	" / "		call	LE52F
+E8B0 : AA 		" "		xra	d
+E8B1 : AA 		" "		xra	d
+E8B2 : 7E 		"~"		mov	a,m
+E8B3 : FF 		" "		rst	7
+E8B4 : FF 		" "		rst	7
+E8B5 : 7F 		" "		mov	a,a
+E8B6 : 7F 		" "		mov	a,a
+E8B7 : 00 		" "		nop
+E8B8 : 00 		" "		nop
+E8B9 : 80 		" "		add	b
+E8BA : 81 		" "		add	c
+E8BB : 00 		" "		nop
+E8BC : 00 		" "		nop
+E8BD : 00 		" "		nop
+E8BE : 81 		" "		add	c
+E8BF : CD E5 21 	"  !"		call	L21E5
+E8C2 : EF 		" "		rst	5
+E8C3 : E8 		" "		rpe
+E8C4 : C3 3F E8 	" ? "		jmp	LE83F
+				;
+E8C7 : DB 0F 		"  "		in	00FH
+E8C9 : 49 		"I"		mov	c,c
+E8CA : 81 		" "		add	c
+E8CB : 00 		" "		nop
+E8CC : 00 		" "		nop
+E8CD : 00 		" "		nop
+E8CE : 7F 		" "		mov	a,a
+E8CF : 05 		" "		dcr	b
+E8D0 : BA 		" "		cmp	d
+E8D1 : D7 		" "		rst	2
+E8D2 : 1E 86 		"  "		mvi	e,086H
+E8D4 : 64 		"d"		mov	h,h
+E8D5 : 26 99 		"& "		mvi	h,099H
+E8D7 : 87 		" "		add	a
+E8D8 : 58 		"X"		mov	e,b
+E8D9 : 34 		"4"		inr	m
+E8DA : 23 		"#"		inx	h
+E8DB : 87 		" "		add	a
+E8DC : E0 		" "		rpo
+E8DD : 5D 		"]"		mov	e,l
+E8DE : E5 		" "		push	h
+E8DF : 44 		"D"		mov	b,h
+E8E0 : CD 09 E4 	"   "		call	LE409
+E8E3 : E1 		" "		pop	h
+E8E4 : CD 55 E5 	" U "		call	LE555
+E8E7 : E5 		" "		push	h
+E8E8 : CD CF E2 	"   "		call	LE2CF
+E8EB : E1 		" "		pop	h
+E8EC : C3 57 E8 	" W "		jmp	LE857
+				;
+E8EF : EF 		" "		rst	5
+E8F0 : FA 8C E8 	"   "		jm	LE88C
+E8F3 : 21 42 02 	"!B "		lxi	h,00242H
+E8F6 : CD 44 E5 	" D "		call	LE544
+E8F9 : C8 		" "		rz
+E8FA : 01 35 98 	" 5 "		lxi	b,09835H
+E8FD : 11 7A 44 	" zD"		lxi	d,0447AH
+E900 : DA 0F 49 	"  I"		jc	L490F
+E903 : 83 		" "		add	e
+E904 : CD 37 E5 	" 7 "		call	LE537
+E907 : CD A7 E8 	"   "		call	LE8A7
+E90A : C1 		" "		pop	b
+E90B : E1 		" "		pop	h
+E90C : CD 37 E5 	" 7 "		call	LE537
+E90F : EB 		" "		xchg
+E910 : CD 47 E5 	" G "		call	LE547
+E913 : CD A1 E8 	"   "		call	LE8A1
+E916 : C3 67 E4 	" g "		jmp	LE467
+				;
+E919 : EF 		" "		rst	5
+E91A : FC 94 E7 	"   "		cm	LE794
+E91D : FC 2F E5 	" / "		cm	LE52F
+E920 : DA 0F 49 	"  I"		jc	L490F
+E923 : 83 		" "		add	e
+E924 : CD 37 E5 	" 7 "		call	LE537
+E927 : CD A7 E8 	"   "		call	LE8A7
+E92A : C1 		" "		pop	b
+E92B : E1 		" "		pop	h
+E92C : CD 37 E5 	" 7 "		call	LE537
+E92F : EB 		" "		xchg
+E930 : 21 C6 E2 	"!  "		lxi	h,0E2C6H
+E933 : E5 		" "		push	h
+E934 : 21 3E E9 	"!> "		lxi	h,0E93EH
+E937 : CD 3F E8 	" ? "		call	LE83F
+E93A : 21 E7 E8 	"!  "		lxi	h,0E8E7H
+E93D : C9 		" "		ret
+				;
+E93E : 2D 		"-"		dcr	l
+E93F : EA C9 CD 	"   "		jpe	LCDC9
+E942 : 55 		"U"		mov	d,l
+E943 : DC EF CD 	"   "		cc	LCDEF
+E946 : 15 		" "		dcr	d
+				;
+E947 : DD 		" "		db	0DDH
+				;
+E948 : 3B 		";"		dcx	sp
+E949 : 07 		" "		rlc
+E94A : 02 		" "		stax	b
+E94B : CD FD F7 	"   "		call	LF7FD
+E94E : E1 		" "		pop	h
+E94F : C9 		" "		ret
+				;
+E950 : 7B 		"{"		mov	a,e
+E951 : 32 B2 D9 	"2  "		sta	XD9B2
+				;
+E954 : C3 		" "		db	0C3H
+				;
+E955				LE955:
+E955 : B4 		" "		ora	h
+E956 : E2 EF CD 	"   "		jpo	LCDEF
+E959 : 15 		" "		dcr	d
+				;
+E95A : D9 		" "		db	0D9H
+				;
+E95B : EB 		" "		xchg
+E95C : CD 82 E9 	"   "		call	LE982
+E95F : C3 00 00 	"   "		jmp	L0000
+				;
+E962 : 81 		" "		add	c
+E963 : 00 		" "		nop
+E964 : 00 		" "		nop
+E965 : EF 		" "		rst	5
+E966 : CD 15 D9 	"   "		call	LD915
+E969 : 1A 		" "		ldax	d
+E96A : C3 99 DF 	"   "		jmp	LDF99
+				;
+E96D : CD 55 DC 	" U "		call	LDC55
+E970 : EF 		" "		rst	5
+E971 : CD 15 D9 	"   "		call	LD915
+E974 : C3 B4 E2 	"   "		jmp	LE2B4
+				;
+E977 : EF 		" "		rst	5
+E978 : CD 15 D9 	"   "		call	LD915
+E97B : EB 		" "		xchg
+E97C : CD 82 E9 	"   "		call	LE982
+E97F : C3 DA 0F 	"   "		jmp	L0FDA
+				;
+E982				LE982:
+E982 : 49 		"I"		mov	c,c
+E983 : 83 		" "		add	e
+E984 : CD 37 E5 	" 7 "		call	LE537
+E987 : CD A7 E8 	"   "		call	LE8A7
+E98A : C1 		" "		pop	b
+E98B : E1 		" "		pop	h
+E98C : CD 37 E5 	" 7 "		call	LE537
+E98F : EB 		" "		xchg
+E990 : CD 47 E5 	" G "		call	LE547
+E993 : CD A1 E8 	"   "		call	LE8A1
+E996 : C3 67 E4 	" g "		jmp	LE467
+				;
+E999 : EF 		" "		rst	5
+E99A : FC 94 E7 	"   "		cm	LE794
+E99D : FC 2F E5 	" / "		cm	LE52F
+E9A0 : DA 0F 49 	"  I"		jc	L490F
+E9A3 : 83 		" "		add	e
+E9A4 : CD 37 E5 	" 7 "		call	LE537
+E9A7 : CD A7 E8 	"   "		call	LE8A7
+E9AA : C1 		" "		pop	b
+E9AB : E1 		" "		pop	h
+E9AC : CD 37 E5 	" 7 "		call	LE537
+E9AF : EB 		" "		xchg
+E9B0 : 21 C6 E2 	"!  "		lxi	h,0E2C6H
+E9B3 : E5 		" "		push	h
+E9B4 : 21 3E E9 	"!> "		lxi	h,0E93EH
+E9B7 : CD 3F E8 	" ? "		call	LE83F
+E9BA : 21 E7 E8 	"!  "		lxi	h,0E8E7H
+E9BD : C9 		" "		ret
+				;
+E9BE : 09 		" "		dad	b
+E9BF : 4A 		"J"		mov	c,d
+E9C0 : C9 		" "		ret
+				;
+E9C1 : CD 55 DC 	" U "		call	LDC55
+E9C4 : EF 		" "		rst	5
+E9C5 : CD 15 D9 	"   "		call	LD915
+E9C8 : EB 		" "		xchg
+E9C9 : 22 B0 C9 	""  "		shld	XC9B0
+E9CC : CD D6 E1 	"   "		call	LE1D6
+E9CF : C9 		" "		ret
+				;
+E9D0 : 7B 		"{"		mov	a,e
+E9D1 : 32 B2 C9 	"2  "		sta	XC9B2
+E9D4 : E5 		" "		push	h
+E9D5 : C5 		" "		push	b
+E9D6				LE9D6:
+E9D6 : CD 22 EA 	" " "		call	LEA22
+E9D9 : C1 		" "		pop	b
+E9DA : E1 		" "		pop	h
+E9DB : C9 		" "		ret
+				;
+E9DC : CD 55 E9 	" U "		call	LE955
+E9DF : C3 00 00 	"   "		jmp	L0000
+				;
+E9E2 : 81 		" "		add	c
+E9E3 : 00 		" "		nop
+E9E4 : 00 		" "		nop
+E9E5 : EF 		" "		rst	5
+E9E6 : CD 15 D9 	"   "		call	LD915
+E9E9 : 1A 		" "		ldax	d
+E9EA : C3 99 DF 	"   "		jmp	LDF99
+				;
+E9ED : CD 55 DC 	" U "		call	LDC55
+E9F0 : EF 		" "		rst	5
+E9F1 : CD 15 D9 	"   "		call	LD915
+E9F4 : C3 B4 E2 	"   "		jmp	LE2B4
+				;
+E9F7 : EF 		" "		rst	5
+E9F8 : CD 15 D9 	"   "		call	LD915
+E9FB : EB 		" "		xchg
+E9FC : CD 82 E9 	"   "		call	LE982
+E9FF : C3 CD 15 	"   "		jmp	L15CD
+				;
+EA02 : D9 		" "		db	0D9H
+				;
+EA03 : EB 		" "		xchg
+EA04 : 22 B4 C9 	""  "		shld	XC9B4
+EA07 : CD D6 E9 	"   "		call	LE9D6
+EA0A : 22 B6 C9 	""  "		shld	XC9B6
+EA0D : CD D6 E9 	"   "		call	LE9D6
+EA10 : 22 B8 C9 	""  "		shld	XC9B8
+EA13 : CD D6 E9 	"   "		call	LE9D6
+EA16 : 22 BA C9 	""  "		shld	XC9BA
+EA19 : EB 		" "		xchg
+EA1A : E5 		" "		push	h
+EA1B : C5 		" "		push	b
+EA1C : CD 74 EA 	" t "		call	LEA74
+EA1F : C1 		" "		pop	b
+				;
+EA20 : CD 		" "		db	0CDH
+				;
+EA21 : 15 		" "		dcr	d
+				;
+EA22				LEA22:
+EA22 : D9 		" "		db	0D9H
+				;
+EA23 : EB 		" "		xchg
+EA24 : 22 B4 C9 	""  "		shld	XC9B4
+EA27 : CD D6 E9 	"   "		call	LE9D6
+EA2A : 22 B6 C9 	""  "		shld	XC9B6
+EA2D				LEA2D:
+EA2D : CD D6 E9 	"   "		call	LE9D6
+EA30 : 36 EA 		"6 "		mvi	m,0EAH
+EA32 : 09 		" "		dad	b
+EA33 : C3 2D EA 	" - "		jmp	LEA2D
+				;
+EA36 : 7D 		"}"		mov	a,l
+EA37 : E6 07 		"  "		ani	007H
+EA39 : 57 		"W"		mov	d,a
+EA3A : B7 		" "		ora	a
+EA3B : 7C 		"|"		mov	a,h
+EA3C : 1F 		" "		rar
+EA3D : 67 		"g"		mov	h,a
+EA3E : 7D 		"}"		mov	a,l
+EA3F : 1F 		" "		rar
+EA40 : DA F5 EA 	"   "		jc	LEAF5
+EA43 : CD 63 EB 	" c "		call	LEB63
+EA46 : 19 		" "		dad	d
+EA47 : 22 4D 02 	""M "		shld	X024D
+EA4A : 2A 55 02 	"*U "		lhld	X0255
+EA4D : EB 		" "		xchg
+EA4E : 2A 51 02 	"*Q "		lhld	X0251
+EA51 : 19 		" "		dad	d
+EA52 : 22 55 02 	""U "		shld	X0255
+EA55 : 2A 53 02 	"*S "		lhld	X0253
+EA58 : EB 		" "		xchg
+EA59 : 2A B8 C9 	"*  "		lhld	XC9B8
+EA5C : CD 77 EB 	" w "		call	LEB77
+EA5F : C8 		" "		rz
+EA60 : DA F5 3A 	"  :"		jc	L3AF5
+EA63 : CD CA EB 	"   "		call	LEBCA
+EA66 : A9 		" "		xra	c
+EA67 : 16 0D 		"  "		mvi	d,00DH
+EA69 : 02 		" "		stax	b
+EA6A : 67 		"g"		mov	h,a
+EA6B : 4A 		"J"		mov	c,d
+EA6C : 47 		"G"		mov	b,a
+EA6D : 21 B4 00 	"!  "		lxi	h,000B4H
+EA70 : CD 51 FB 	" Q "		call	LFB51
+EA73 : C9 		" "		ret
+				;
+EA74				LEA74:
+EA74 : 2A B8 C9 	"*  "		lhld	XC9B8
+EA77 : EB 		" "		xchg
+EA78 : 2A B4 C9 	"*  "		lhld	XC9B4
+EA7B : CD 63 EB 	" c "		call	LEB63
+EA7E : 19 		" "		dad	d
+EA7F : CD CD 15 	"   "		call	L15CD
+				;
+EA82 : D9 		" "		db	0D9H
+				;
+EA83 : EB 		" "		xchg
+EA84 : 22 B4 C9 	""  "		shld	XC9B4
+EA87 : CD D6 E9 	"   "		call	LE9D6
+EA8A : 22 B6 C9 	""  "		shld	XC9B6
+EA8D : CD D6 E9 	"   "		call	LE9D6
+EA90 : 22 B8 C9 	""  "		shld	XC9B8
+EA93 : CD D6 E9 	"   "		call	LE9D6
+EA96 : 22 BA C9 	""  "		shld	XC9BA
+EA99 : EB 		" "		xchg
+EA9A : E5 		" "		push	h
+EA9B : C5 		" "		push	b
+EA9C : CD 74 EA 	" t "		call	LEA74
+EA9F : C1 		" "		pop	b
+EAA0 : CD 15 D9 	"   "		call	LD915
+EAA3 : EB 		" "		xchg
+EAA4 : 22 B4 C9 	""  "		shld	XC9B4
+EAA7 : CD D6 E9 	"   "		call	LE9D6
+EAAA : 22 B6 C9 	""  "		shld	XC9B6
+EAAD : CD D6 E9 	"   "		call	LE9D6
+EAB0 : 36 EA 		"6 "		mvi	m,0EAH
+EAB2 : 09 		" "		dad	b
+EAB3 : C3 2D EA 	" - "		jmp	LEA2D
+				;
+EAB6 : 7D 		"}"		mov	a,l
+EAB7 : E6 07 		"  "		ani	007H
+EAB9 : 57 		"W"		mov	d,a
+EABA : B7 		" "		ora	a
+EABB : 7C 		"|"		mov	a,h
+EABC : 1F 		" "		rar
+EABD : 67 		"g"		mov	h,a
+EABE				LEABE:
+EABE : 7D 		"}"		mov	a,l
+EABF : 1F 		" "		rar
+EAC0 : DA F5 EA 	"   "		jc	LEAF5
+EAC3 : CD 63 EB 	" c "		call	LEB63
+EAC6 : 19 		" "		dad	d
+EAC7 : 22 4D 02 	""M "		shld	X024D
+EACA : 2A 55 02 	"*U "		lhld	X0255
+EACD : EB 		" "		xchg
+EACE : 2A 51 02 	"*Q "		lhld	X0251
+EAD1 : 19 		" "		dad	d
+EAD2 : 22 55 02 	""U "		shld	X0255
+EAD5 : 2A 53 02 	"*S "		lhld	X0253
+EAD8 : EB 		" "		xchg
+EAD9 : 2A B8 C9 	"*  "		lhld	XC9B8
+EADC : CD 77 EB 	" w "		call	LEB77
+EADF : C8 		" "		rz
+EAE0 : DA F5 EA 	"   "		jc	LEAF5
+EAE3 : CD 63 EB 	" c "		call	LEB63
+EAE6 : 19 		" "		dad	d
+EAE7 : 22 4D 02 	""M "		shld	X024D
+EAEA : 2A 55 02 	"*U "		lhld	X0255
+EAED : EB 		" "		xchg
+EAEE : 2A 51 02 	"*Q "		lhld	X0251
+EAF1 : 19 		" "		dad	d
+EAF2 : 22 55 02 	""U "		shld	X0255
+EAF5				LEAF5:
+EAF5 : 2A 53 02 	"*S "		lhld	X0253
+EAF8 : EB 		" "		xchg
+EAF9 : 2A B8 C9 	"*  "		lhld	XC9B8
+EAFC : CD 77 EB 	" w "		call	LEB77
+EAFF : C8 		" "		rz
+EB00 : EB 		" "		xchg
+EB01 : 23 		"#"		inx	h
+EB02 : C3 BE EA 	"   "		jmp	LEABE
+				;
+EB05 : 3A 52 02 	":R "		lda	X0252
+EB08 : B7 		" "		ora	a
+EB09 : C4 7D EB 	" } "		cnz	LEB7D
+EB0C : 2A B4 C9 	"*  "		lhld	XC9B4
+EB0F : 22 53 02 	""S "		shld	X0253
+EB12 : 26 00 		"& "		mvi	h,000H
+EB14 : 6C 		"l"		mov	l,h
+EB15 : 22 4B 02 	""K "		shld	X024B
+EB18 : 2A B6 C9 	"*  "		lhld	XC9B6
+EB1B				LEB1B:
+EB1B : 22 55 02 	""U "		shld	X0255
+EB1E : 7D 		"}"		mov	a,l
+EB1F : 32 EB 23 	"2 #"		sta	X23EB
+EB22 : C3 BE EA 	"   "		jmp	LEABE
+				;
+EB25 : 3A 52 02 	":R "		lda	X0252
+EB28 : B7 		" "		ora	a
+EB29 : C4 7D EB 	" } "		cnz	LEB7D
+EB2C : 2A B4 C9 	"*  "		lhld	XC9B4
+EB2F : 22 57 02 	""W "		shld	X0257
+EB32 : 19 		" "		dad	d
+EB33 : 22 4B 02 	""K "		shld	X024B
+EB36 : EB 		" "		xchg
+EB37 : 2A 59 02 	"*Y "		lhld	X0259
+EB3A : 7B 		"{"		mov	a,e
+EB3B : 95 		" "		sub	l
+EB3C : 7A 		"z"		mov	a,d
+EB3D : 9C 		" "		sbb	h
+EB3E : DA 53 81 	" S "		jc	L8153
+EB41 : E0 		" "		rpo
+EB42 : C3 F8 D3 	"   "		jmp	LD3F8
+				;
+EB45 : C5 		" "		push	b
+EB46 : D5 		" "		push	d
+EB47 : 7E 		"~"		mov	a,m
+EB48 : CD 81 D7 	"   "		call	LD781
+EB4B : CD 06 D9 	"   "		call	LD906
+EB4E : DA 18 EC 	"   "		jc	LEC18
+EB51 : 11 00 C9 	"   "		lxi	d,0C900H
+EB54 : 0E 08 		"  "		mvi	c,008H
+EB56 : 7E 		"~"		mov	a,m
+EB57 : B7 		" "		ora	a
+EB58 : 8A 		" "		adc	d
+EB59 : C0 		" "		rnz
+EB5A : E8 		" "		rpe
+EB5B : BC 		" "		cmp	h
+EB5C : C9 		" "		ret
+				;
+EB5D : 2A B4 C9 	"*  "		lhld	XC9B4
+EB60 : C3 1B EB 	"   "		jmp	LEB1B
+				;
+EB63				LEB63:
+EB63 : 7C 		"|"		mov	a,h
+EB64 : 2F 		"/"		cma
+EB65 : 67 		"g"		mov	h,a
+EB66 : 7D 		"}"		mov	a,l
+EB67 : 2F 		"/"		cma
+EB68 : 6F 		"o"		mov	l,a
+EB69 : 23 		"#"		inx	h
+EB6A : C9 		" "		ret
+				;
+EB6B : 7C 		"|"		mov	a,h
+EB6C : B7 		" "		ora	a
+EB6D : 11 01 00 	"   "		lxi	d,00001H
+EB70 : F0 		" "		rp
+EB71 : CD 63 EB 	" c "		call	LEB63
+EB74 : 1B 		" "		dcx	d
+EB75 : 1B 		" "		dcx	d
+EB76 : C9 		" "		ret
+				;
+EB77				LEB77:
+EB77 : 7B 		"{"		mov	a,e
+EB78 : BD 		" "		cmp	l
+EB79 : C0 		" "		rnz
+EB7A : 7A 		"z"		mov	a,d
+EB7B : BC 		" "		cmp	h
+EB7C : C9 		" "		ret
+				;
+EB7D				LEB7D:
+EB7D : 2A B4 C9 	"*  "		lhld	XC9B4
+EB80 : EB 		" "		xchg
+EB81 : 23 		"#"		inx	h
+EB82 : C3 BE EA 	"   "		jmp	LEABE
+				;
+EB85 : 3A 52 02 	":R "		lda	X0252
+EB88 : B7 		" "		ora	a
+EB89 : C4 7D EB 	" } "		cnz	LEB7D
+EB8C : 2A B4 C9 	"*  "		lhld	XC9B4
+EB8F : 22 53 02 	""S "		shld	X0253
+EB92 : 26 00 		"& "		mvi	h,000H
+EB94 : 6C 		"l"		mov	l,h
+EB95 : 22 4B 02 	""K "		shld	X024B
+EB98 : 2A B6 C9 	"*  "		lhld	XC9B6
+EB9B : 22 55 02 	""U "		shld	X0255
+EB9E : 7D 		"}"		mov	a,l
+EB9F : 32 EB 23 	"2 #"		sta	X23EB
+EBA2 : C3 BE EA 	"   "		jmp	LEABE
+				;
+EBA5 : 3A 52 02 	":R "		lda	X0252
+EBA8 : B7 		" "		ora	a
+EBA9 : C4 7D EB 	" } "		cnz	LEB7D
+EBAC : 2A B4 C9 	"*  "		lhld	XC9B4
+EBAF : 22 57 02 	""W "		shld	X0257
+EBB2 : 19 		" "		dad	d
+EBB3 : 22 4B 02 	""K "		shld	X024B
+EBB6 : EB 		" "		xchg
+EBB7 : 2A 59 02 	"*Y "		lhld	X0259
+EBBA : 7B 		"{"		mov	a,e
+EBBB : 95 		" "		sub	l
+EBBC : 7A 		"z"		mov	a,d
+EBBD : 9C 		" "		sbb	h
+EBBE : DA 53 81 	" S "		jc	L8153
+EBC1 : E0 		" "		rpo
+EBC2 : C3 F8 D3 	"   "		jmp	LD3F8
+				;
+EBC5 : C5 		" "		push	b
+EBC6 : D5 		" "		push	d
+EBC7 : 7E 		"~"		mov	a,m
+				;
+EBC8 : CD 		" "		db	0CDH
+				;
+EBC9 : 81 		" "		add	c
+				;
+EBCA				LEBCA:
+EBCA : D7 		" "		db	0D7H
+				;
+EBCB : CD 06 D9 	"   "		call	LD906
+EBCE : C9 		" "		ret
+				;
+EBCF : 1D 		" "		dcr	e
+EBD0 : EC 11 00 	"   "		cpe	L0011
+EBD3 : C9 		" "		ret
+				;
+EBD4 : 0E 08 		"  "		mvi	c,008H
+EBD6 : 7E 		"~"		mov	a,m
+EBD7 : B7 		" "		ora	a
+EBD8 : FA C0 7A 	"  z"		jm	L7AC0
+EBDB : BC 		" "		cmp	h
+EBDC : C9 		" "		ret
+				;
+EBDD : 2A B4 C9 	"*  "		lhld	XC9B4
+EBE0 : C3 1B EB 	"   "		jmp	LEB1B
+				;
+EBE3 : 7C 		"|"		mov	a,h
+EBE4 : 2F 		"/"		cma
+EBE5				LEBE5:
+EBE5 : 67 		"g"		mov	h,a
+EBE6 : 7D 		"}"		mov	a,l
+EBE7 : 2F 		"/"		cma
+EBE8 : 6F 		"o"		mov	l,a
+EBE9 : 23 		"#"		inx	h
+EBEA : C9 		" "		ret
+				;
+EBEB : 7C 		"|"		mov	a,h
+EBEC : B7 		" "		ora	a
+EBED : 11 01 00 	"   "		lxi	d,00001H
+EBF0 : F0 		" "		rp
+EBF1 : CD 63 EB 	" c "		call	LEB63
+EBF4 : 1B 		" "		dcx	d
+EBF5 : 1B 		" "		dcx	d
+EBF6				LEBF6:
+EBF6 : C9 		" "		ret
+				;
+EBF7 : 7B 		"{"		mov	a,e
+EBF8 : BD 		" "		cmp	l
+EBF9 : C0 		" "		rnz
+EBFA : 7A 		"z"		mov	a,d
+EBFB : BC 		" "		cmp	h
+EBFC : C9 		" "		ret
+				;
+EBFD : 2A B4 C9 	"*  "		lhld	XC9B4
+EC00 : FE 20 		"  "		cpi	020H
+EC02 : C2 09 EC 	"   "		jnz	LEC09
+EC05 : 0C 		" "		inr	c
+EC06 : C3 0B EC 	"   "		jmp	LEC0B
+				;
+EC09				LEC09:
+EC09 : 12 		" "		stax	d
+EC0A : 13 		" "		inx	d
+EC0B				LEC0B:
+EC0B : 23 		"#"		inx	h
+EC0C : 0D 		" "		dcr	c
+EC0D : C2 F6 EB 	"   "		jnz	LEBF6
+EC10 : 2B 		"+"		dcx	h
+EC11 : D7 		" "		rst	2
+EC12 : 3E 0D 		"> "		mvi	a,00DH
+EC14 : 12 		" "		stax	d
+EC15 : D1 		" "		pop	d
+EC16 : C1 		" "		pop	b
+EC17 : C9 		" "		ret
+				;
+EC18				LEC18:
+EC18 : D1 		" "		pop	d
+EC19 : C1 		" "		pop	b
+EC1A : C3 54 D3 	" T "		jmp	LD354
+				;
+EC1D : CD E5 EB 	"   "		call	LEBE5
+EC20 : FE 20 		"  "		cpi	020H
+EC22 : C2 09 EC 	"   "		jnz	LEC09
+EC25 : 0C 		" "		inr	c
+EC26 : C3 0B EC 	"   "		jmp	LEC0B
+				;
+EC29 : 12 		" "		stax	d
+EC2A : 13 		" "		inx	d
+EC2B : 23 		"#"		inx	h
+EC2C : 0D 		" "		dcr	c
+EC2D : C2 F6 EB 	"   "		jnz	LEBF6
+EC30 : CD 15 D9 	"   "		call	LD915
+EC33 : EB 		" "		xchg
+EC34 : 22 49 02 	""I "		shld	X0249
+EC37 : EB 		" "		xchg
+EC38 : CF 		" "		rst	1
+EC39 : 2C 		","		inr	l
+EC3A : CD 55 DC 	" U "		call	LDC55
+EC3D : CD 11 D9 	"   "		call	LD911
+EC40 : E4 D6 00 	"   "		cpo	L00D6
+EC43 : 6F 		"o"		mov	l,a
+EC44 : 7C 		"|"		mov	a,h
+EC45 : DE 00 		"  "		sbi	000H
+EC47 : 67 		"g"		mov	h,a
+EC48 : 78 		"x"		mov	a,b
+EC49 : DE 00 		"  "		sbi	000H
+EC4B : 47 		"G"		mov	b,a
+EC4C : 3E 00 		"> "		mvi	a,000H
+EC4E : C3 92 E4 	"   "		jmp	LE492
+EC51 : C3 F3 EC 	"   "		jmp	LECF3
+				;
+EC54 : 21 5C 02 	"!\ "		lxi	h,0025CH
+EC57 : CD F3 F9 	"   "		call	LF9F3
+EC5A : 3E 2C 		">,"		mvi	a,02CH
+EC5C : 32 02 01 	"2  "		sta	X0102
+EC5F : 21 EC 31 	"! 1"		lxi	h,031ECH
+EC62 : 00 		" "		nop
+EC63 : C9 		" "		ret
+				;
+EC64 : CD A0 F9 	"   "		call	LF9A0
+EC67 : AF 		" "		xra	a
+EC68 : 32 00 03 	"2  "		sta	X0300
+EC6B : CD A3 EC 	"   "		call	LECA3
+EC6E : 01 C6 EC 	"   "		lxi	b,0ECC6H
+EC71 : 11 F1 EC 	"   "		lxi	d,0ECF1H
+EC74 : 21 5C 02 	"!\ "		lxi	h,0025CH
+EC77 : CD F3 F9 	"   "		call	LF9F3
+EC7A : 3E 2C 		">,"		mvi	a,02CH
+EC7C : 32 02 01 	"2  "		sta	X0102
+EC7F : 21 FE 20 	"!  "		lxi	h,020FEH
+EC82 : C2 09 EC 	"   "		jnz	LEC09
+EC85 : 0C 		" "		inr	c
+EC86 : C3 0B EC 	"   "		jmp	LEC0B
+				;
+EC89 : 12 		" "		stax	d
+EC8A : 13 		" "		inx	d
+EC8B : 23 		"#"		inx	h
+EC8C : 0D 		" "		dcr	c
+EC8D : C2 F6 EB 	"   "		jnz	LEBF6
+EC90 : 2B 		"+"		dcx	h
+EC91 : D7 		" "		rst	2
+EC92 : 3E 0D 		"> "		mvi	a,00DH
+EC94 : 12 		" "		stax	d
+EC95 : D1 		" "		pop	d
+EC96 : C1 		" "		pop	b
+EC97 : C9 		" "		ret
+				;
+EC98 : D1 		" "		pop	d
+EC99 : C1 		" "		pop	b
+EC9A : C3 54 D3 	" T "		jmp	LD354
+				;
+EC9D : CD E5 EB 	"   "		call	LEBE5
+ECA0 : FE 20 		"  "		cpi	020H
+				;
+ECA2 : C2 		" "		db	0C2H
+ECA3				LECA3:
+ECA3 : 09 		" "		db	009H
+				;
+ECA4 : EC 0C C3 	"   "		cpe	0C30CH
+ECA7 : 0B 		" "		dcx	b
+ECA8 : EC 12 13 	"   "		cpe	L1312
+ECAB : 23 		"#"		inx	h
+ECAC : 0D 		" "		dcr	c
+ECAD : C2 F6 EB 	"   "		jnz	LEBF6
+ECB0 : CD 15 D9 	"   "		call	LD915
+ECB3 : EB 		" "		xchg
+ECB4 : 22 49 02 	""I "		shld	X0249
+ECB7 : EB 		" "		xchg
+ECB8 : CF 		" "		rst	1
+ECB9 : 2C 		","		inr	l
+ECBA : CD 55 DC 	" U "		call	LDC55
+ECBD : CD 11 D9 	"   "		call	LD911
+ECC0 : E4 D6 00 	"   "		cpo	L00D6
+ECC3 : 6F 		"o"		mov	l,a
+ECC4 : 7C 		"|"		mov	a,h
+ECC5 : DE 00 		"  "		sbi	000H
+ECC7 : 67 		"g"		mov	h,a
+ECC8 : 78 		"x"		mov	a,b
+ECC9 : DE 00 		"  "		sbi	000H
+ECCB : 47 		"G"		mov	b,a
+ECCC : 3E 00 		"> "		mvi	a,000H
+ECCE : C3 92 E4 	"   "		jmp	LE492
+ECD1 : C3 F3 EE 	"   "		jmp	LEEF3
+ECD4 : C3 FA EC 	"   "		jmp	LECFA
+ECD7 : C3 01 ED 	"   "		jmp	LED01
+				;
+ECDA : AF 		" "		xra	a
+ECDB : 32 36 C8 	"26 "		sta	XC836
+ECDE : C3 06 E4 	"   "		jmp	LE406
+				;
+ECE1 : D6 00 		"  "		sui	000H
+ECE3 : 6F 		"o"		mov	l,a
+ECE4 : 7C 		"|"		mov	a,h
+ECE5 : DE 00 		"  "		sbi	000H
+ECE7 : 67 		"g"		mov	h,a
+ECE8 : 78 		"x"		mov	a,b
+ECE9 : DE 03 		"  "		sbi	003H
+ECEB : C7 		" "		rst	0
+ECEC : A3 		" "		ana	e
+ECED : E0 		" "		rpo
+ECEE : 01 C6 EC 	"   "		lxi	b,0ECC6H
+ECF1 : 81 		" "		add	c
+ECF2 : F1 		" "		pop	psw
+ECF3				LECF3:
+ECF3 : EC 21 5C 	" !\"		cpe	L5C21
+ECF6 : 02 		" "		stax	b
+ECF7 : CD F3 F9 	"   "		call	LF9F3
+				;
+ECFA				LECFA:
+ECFA : 3E 		">"		db	03EH
+				;
+ECFB				LECFB:
+ECFB : 2C 		","		inr	l
+ECFC : 32 02 01 	"2  "		sta	X0102
+				;
+ECFF : 21 		"!"		db	021H
+ED00 : ED 		" "		db	0EDH
+ED01				LED01:
+ED01 : 3E 		">"		db	03EH
+				;
+ED02 : C0 		" "		rnz
+ED03 : C3 FB EC 	"   "		jmp	LECFB
+				;
+ED06 : D5 		" "		push	d
+ED07 : 22 37 C8 	""7 "		shld	XC837
+ED0A : 21 59 EE 	"!Y "		lxi	h,0EE59H
+ED0D : CD 2C EE 	" , "		call	LEE2C
+ED10 : 21 84 EE 	"!  "		lxi	h,0EE84H
+ED13 : CD 3F EE 	" ? "		call	LEE3F
+ED16				LED16:
+ED16 : 21 56 EE 	"!V "		lxi	h,0EE56H
+ED19 : 06 03 		"  "		mvi	b,003H
+ED1B : 3E FF 		"> "		mvi	a,0FFH
+ED1D : CD 93 EF 	"   "		call	LEF93
+				;
+ED20 : ED 		" "		db	0EDH
+				;
+ED21 : 3E C0 		"> "		mvi	a,0C0H
+ED23 : C3 FB EC 	"   "		jmp	LECFB
+				;
+ED26 : D5 		" "		push	d
+ED27 : 22 37 C8 	""7 "		shld	XC837
+ED2A : 21 59 EE 	"!Y "		lxi	h,0EE59H
+ED2D : CD 2C EE 	" , "		call	LEE2C
+ED30 : EE FE 		"  "		xri	0FEH
+ED32 : 0D 		" "		dcr	c
+ED33 : CA F1 ED 	"   "		jz	LEDF1
+ED36 : 77 		"w"		mov	m,a
+ED37 : FE 0D 		"  "		cpi	00DH
+ED39 : CA 43 ED 	" C "		jz	LED43
+ED3C : 23 		"#"		inx	h
+ED3D : CD 00 EE 	"   "		call	LEE00
+ED40 : A7 		" "		ana	a
+ED41 : EE C3 		"  "		xri	0C3H
+ED43				LED43:
+ED43 : 3F 		"?"		cmc
+ED44 : EE 21 		" !"		xri	021H
+ED46 : B2 		" "		ora	d
+ED47 : EE C3 		"  "		xri	0C3H
+ED49 : 3F 		"?"		cmc
+ED4A : EE 21 		" !"		xri	021H
+ED4C : BF 		" "		cmp	a
+ED4D : EE C3 		"  "		xri	0C3H
+ED4F : 3F 		"?"		cmc
+ED50 : EE 21 		" !"		xri	021H
+ED52 : E5 		" "		push	h
+ED53 : EE D1 		"  "		xri	0D1H
+ED55 : C3 3F EE 	" ? "		jmp	LEE3F
+				;
+ED58 : D5 		" "		push	d
+ED59 : CD 06 EE 	"   "		call	LEE06
+ED5C : D1 		" "		pop	d
+ED5D : C3 95 ED 	"   "		jmp	LED95
+				;
+ED60 : A7 		" "		ana	a
+ED61 : EE C3 		"  "		xri	0C3H
+ED63 : 3F 		"?"		cmc
+ED64 : EE 21 		" !"		xri	021H
+ED66 : B2 		" "		ora	d
+				;
+ED67 : EE 		" "		db	0EEH
+				;
+ED68				LED68:
+ED68 : 46 		"F"		mov	b,m
+ED69 : 3F 		"?"		cmc
+ED6A : EE C1 		"  "		xri	0C1H
+ED6C : 16 ED 		"  "		mvi	d,0EDH
+ED6E : FE 0D 		"  "		cpi	00DH
+ED70 : CA 78 ED 	" x "		jz	LED78
+ED73 : 23 		"#"		inx	h
+ED74 : 13 		" "		inx	d
+ED75 : C3 68 ED 	" h "		jmp	LED68
+				;
+ED78				LED78:
+ED78 : 3A 36 C8 	":6 "		lda	XC836
+ED7B : B7 		" "		ora	a
+ED7C : FA A8 ED 	"   "		jm	LEDA8
+ED7F : 21 ED 3E 	"! >"		lxi	h,03EEDH
+ED82 : C0 		" "		rnz
+ED83 : C3 FB EC 	"   "		jmp	LECFB
+				;
+ED86 : D5 		" "		push	d
+ED87 : 22 37 C8 	""7 "		shld	XC837
+ED8A : 21 59 EE 	"!Y "		lxi	h,0EE59H
+ED8D : CD 2C EE 	" , "		call	LEE2C
+ED90 : 21 84 EE 	"!  "		lxi	h,0EE84H
+				;
+ED93 : CD 		" "		db	0CDH
+				;
+ED94 : 3F 		"?"		cmc
+				;
+ED95				LED95:
+ED95 : EE 		" "		db	0EEH
+				;
+ED96 : 21 56 EE 	"!V "		lxi	h,0EE56H
+ED99 : 06 03 		"  "		mvi	b,003H
+ED9B : 3E FF 		"> "		mvi	a,0FFH
+ED9D : CD 93 EF 	"   "		call	LEF93
+				;
+EDA0 : ED 		" "		db	0EDH
+				;
+EDA1 : 3E C0 		"> "		mvi	a,0C0H
+EDA3 : C3 FB EC 	"   "		jmp	LECFB
+				;
+EDA6 : D5 		" "		push	d
+				;
+EDA7 : 22 		"""		db	022H
+EDA8				LEDA8:
+EDA8 : 37 		"7"		db	037H
+				;
+EDA9 : C8 		" "		rz
+EDAA : 21 59 EE 	"!Y "		lxi	h,0EE59H
+EDAD : CD 2C EE 	" , "		call	LEE2C
+EDB0 : EE FE 		"  "		xri	0FEH
+EDB2 : 0D 		" "		dcr	c
+EDB3 : CA F1 ED 	"   "		jz	LEDF1
+EDB6 : 77 		"w"		mov	m,a
+EDB7 : FE 0D 		"  "		cpi	00DH
+EDB9 : CA 43 ED 	" C "		jz	LED43
+EDBC : 23 		"#"		inx	h
+EDBD : CD 00 EE 	"   "		call	LEE00
+EDC0 : A7 		" "		ana	a
+EDC1 : EE C3 		"  "		xri	0C3H
+EDC3 : 3F 		"?"		cmc
+EDC4 : EE 21 		" !"		xri	021H
+EDC6 : B2 		" "		ora	d
+EDC7 : EE C3 		"  "		xri	0C3H
+EDC9 : 3F 		"?"		cmc
+EDCA : EE 21 		" !"		xri	021H
+EDCC : BF 		" "		cmp	a
+EDCD : EE C3 		"  "		xri	0C3H
+EDCF : 3F 		"?"		cmc
+EDD0 : EE 21 		" !"		xri	021H
+EDD2 : E5 		" "		push	h
+EDD3 : EE D1 		"  "		xri	0D1H
+EDD5 : C3 3F EE 	" ? "		jmp	LEE3F
+				;
+EDD8 : D5 		" "		push	d
+EDD9 : CD 06 EE 	"   "		call	LEE06
+EDDC : D1 		" "		pop	d
+EDDD : C3 95 ED 	"   "		jmp	LED95
+				;
+EDE0 : A7 		" "		ana	a
+EDE1 : EE C3 		"  "		xri	0C3H
+EDE3 : 3F 		"?"		cmc
+EDE4 : EE 21 		" !"		xri	021H
+EDE6 : B2 		" "		ora	d
+EDE7 : C8 		" "		rz
+EDE8 : C3 1A B8 	"   "		jmp	LB81A
+				;
+EDEB : C2 16 ED 	"   "		jnz	LED16
+EDEE : FE 0D 		"  "		cpi	00DH
+				;
+EDF0 : CA 		" "		db	0CAH
+EDF1				LEDF1:
+EDF1 : 78 		"x"		db	078H
+EDF2 : ED 		" "		db	0EDH
+				;
+EDF3 : 23 		"#"		inx	h
+EDF4 : 13 		" "		inx	d
+EDF5 : C3 68 ED 	" h "		jmp	LED68
+				;
+EDF8 : 3A 36 C8 	":6 "		lda	XC836
+EDFB : B7 		" "		ora	a
+EDFC : FA A8 ED 	"   "		jm	LEDA8
+				;
+EDFF : 21 		"!"		db	021H
+EE00				LEE00:
+EE00 : 3E 		">"		db	03EH
+EE01 : 08 		" "		db	008H
+				;
+EE02 : CD 93 EF 	"   "		call	LEF93
+EE05 : C9 		" "		ret
+				;
+EE06				LEE06:
+EE06 : 3E FF 		"> "		mvi	a,0FFH
+EE08 : CD 93 EF 	"   "		call	LEF93
+EE0B : 5F 		"_"		mov	e,a
+EE0C : CD 00 EE 	"   "		call	LEE00
+EE0F : 57 		"W"		mov	d,a
+EE10 : CD 00 EE 	"   "		call	LEE00
+EE13 : 4F 		"O"		mov	c,a
+EE14 : 6F 		"o"		mov	l,a
+EE15 : CD 00 EE 	"   "		call	LEE00
+EE18 : 47 		"G"		mov	b,a
+EE19 : 67 		"g"		mov	h,a
+EE1A : 22 2D C8 	""- "		shld	XC82D
+EE1D : AF 		" "		xra	a
+EE1E : 67 		"g"		mov	h,a
+EE1F : 6F 		"o"		mov	l,a
+				;
+EE20 : 3E 		">"		db	03EH
+EE21				LEE21:
+EE21 : 08 		" "		db	008H
+				;
+EE22 : CD 93 EF 	"   "		call	LEF93
+EE25 : C9 		" "		ret
+				;
+EE26 : 3E FF 		"> "		mvi	a,0FFH
+EE28 : CD 93 EF 	"   "		call	LEF93
+EE2B : 5F 		"_"		mov	e,a
+EE2C				LEE2C:
+EE2C : CD 00 EE 	"   "		call	LEE00
+EE2F : 57 		"W"		mov	d,a
+EE30 : 71 		"q"		mov	m,c
+EE31 : F9 		" "		sphl
+EE32 : 21 6C EE 	"!l "		lxi	h,0EE6CH
+EE35 : CD 21 EE 	" ! "		call	LEE21
+EE38 : CD 45 FA 	" E "		call	LFA45
+EE3B : CD 71 F9 	" q "		call	LF971
+EE3E : C9 		" "		ret
+				;
+EE3F				LEE3F:
+EE3F : CD 76 69 	" vi"		call	L6976
+EE42 : 6E 		"n"		mov	l,m
+EE43 : 67 		"g"		mov	h,a
+EE44 : 24 		"$"		inr	h
+EE45 : 45 		"E"		mov	b,l
+EE46 : 6E 		"n"		mov	l,m
+EE47 : 64 		"d"		mov	h,h
+				;
+EE48 : 20 		" "		db	020H
+				;
+EE49 : 6F 		"o"		mov	l,a
+EE4A : 66 		"f"		mov	h,m
+				;
+EE4B : 20 		" "		db	020H
+				;
+EE4C : 66 		"f"		mov	h,m
+EE4D : 69 		"i"		mov	l,c
+EE4E : 6C 		"l"		mov	l,h
+EE4F : 65 		"e"		mov	h,l
+EE50 : 73 		"s"		mov	m,e
+EE51 : 07 		" "		rlc
+EE52 : 24 		"$"		inr	h
+				;
+EE53 : 20 		" "		db	020H
+				;
+EE54 : 6B 		"k"		mov	l,e
+EE55 : 65 		"e"		mov	h,l
+EE56 : 79 		"y"		mov	a,c
+				;
+EE57 : 20 		" "		db	020H
+				;
+EE58 : 6F 		"o"		mov	l,a
+EE59 : 6E 		"n"		mov	l,m
+				;
+EE5A : 20 		" "		db	020H
+				;
+EE5B : 6B 		"k"		mov	l,e
+EE5C : 65 		"e"		mov	h,l
+EE5D : 73 		"s"		mov	m,e
+				;
+EE5E : 20 		" "		db	020H
+				;
+EE5F : 50 		"P"		mov	d,b
+EE60 : 21 EE CD 	"!  "		lxi	h,0CDEEH
+EE63 : 71 		"q"		mov	m,c
+EE64 : F9 		" "		sphl
+EE65 : C9 		" "		ret
+				;
+EE66 : 4F 		"O"		mov	c,a
+EE67 : 06 00 		"  "		mvi	b,000H
+EE69 : 09 		" "		dad	b
+EE6A : D0 		" "		rnc
+EE6B : 23 		"#"		inx	h
+EE6C : C9 		" "		ret
+				;
+EE6D : 3A 36 20 	":6 "		lda	X2036
+EE70 : 61 		"a"		mov	h,c
+EE71 : 6E 		"n"		mov	l,m
+EE72 : 79 		"y"		mov	a,c
+				;
+EE73 : 20 		" "		db	020H
+				;
+EE74 : 6B 		"k"		mov	l,e
+EE75 : 65 		"e"		mov	h,l
+EE76 : 79 		"y"		mov	a,c
+				;
+EE77 : 20 		" "		db	020H
+				;
+EE78 : 6F 		"o"		mov	l,a
+EE79 : 6E 		"n"		mov	l,m
+				;
+EE7A : 20 		" "		db	020H
+				;
+EE7B : 6B 		"k"		mov	l,e
+EE7C : 65 		"e"		mov	h,l
+EE7D : 79 		"y"		mov	a,c
+EE7E : 62 		"b"		mov	h,d
+EE7F : 6F 		"o"		mov	l,a
+EE80 : 3E 08 		"> "		mvi	a,008H
+EE82 : CD 93 EF 	"   "		call	LEF93
+EE85 : C9 		" "		ret
+				;
+EE86 : 3E FF 		"> "		mvi	a,0FFH
+EE88 : CD 93 EF 	"   "		call	LEF93
+EE8B : 5F 		"_"		mov	e,a
+EE8C : CD 00 EE 	"   "		call	LEE00
+EE8F : 57 		"W"		mov	d,a
+EE90 : CD 00 EE 	"   "		call	LEE00
+EE93 : 4F 		"O"		mov	c,a
+EE94 : 6F 		"o"		mov	l,a
+EE95 : CD 00 EE 	"   "		call	LEE00
+EE98 : 47 		"G"		mov	b,a
+EE99 : 67 		"g"		mov	h,a
+EE9A : 22 2D C8 	""- "		shld	XC82D
+EE9D : AF 		" "		xra	a
+EE9E : 67 		"g"		mov	h,a
+EE9F : 6F 		"o"		mov	l,a
+EEA0 : 3E 08 		"> "		mvi	a,008H
+EEA2 : CD 93 EF 	"   "		call	LEF93
+EEA5 : C9 		" "		ret
+				;
+EEA6 : 1C 		" "		inr	e
+EEA7 : F8 		" "		rm
+EEA8 : 23 		"#"		inx	h
+EEA9 : C3 21 EE 	" ! "		jmp	LEE21
+				;
+EEAC : CD 21 EE 	" ! "		call	LEE21
+EEAF : CD 71 F9 	" q "		call	LF971
+EEB2 : 21 6C EE 	"!l "		lxi	h,0EE6CH
+EEB5 : CD 21 EE 	" ! "		call	LEE21
+EEB8 : CD 45 FA 	" E "		call	LFA45
+EEBB : CD 71 F9 	" q "		call	LF971
+EEBE : C9 		" "		ret
+				;
+EEBF : CD 76 69 	" vi"		call	L6976
+EEC2 : 6E 		"n"		mov	l,m
+EEC3 : 67 		"g"		mov	h,a
+EEC4 : 24 		"$"		inr	h
+EEC5 : 45 		"E"		mov	b,l
+EEC6 : 6E 		"n"		mov	l,m
+EEC7 : 64 		"d"		mov	h,h
+				;
+EEC8 : 20 		" "		db	020H
+				;
+EEC9 : 6F 		"o"		mov	l,a
+EECA : 66 		"f"		mov	h,m
+				;
+EECB : 20 		" "		db	020H
+				;
+EECC : 66 		"f"		mov	h,m
+EECD : 69 		"i"		mov	l,c
+EECE : 6C 		"l"		mov	l,h
+EECF : 65 		"e"		mov	h,l
+EED0 : 73 		"s"		mov	m,e
+EED1 : 07 		" "		rlc
+EED2 : 24 		"$"		inr	h
+EED3 : 7E 		"~"		mov	a,m
+EED4 : FE 0D 		"  "		cpi	00DH
+EED6 : CA 22 FA 	" " "		jz	LFA22
+EED9 : 79 		"y"		mov	a,c
+EEDA : 93 		" "		sub	e
+EEDB : 6B 		"k"		mov	l,e
+EEDC : 65 		"e"		mov	h,l
+EEDD : 79 		"y"		mov	a,c
+EEDE : 62 		"b"		mov	h,d
+EEDF : 6F 		"o"		mov	l,a
+EEE0 : 4C 		"L"		mov	c,h
+EEE1 : 41 		"A"		mov	b,c
+EEE2 : 59 		"Y"		mov	e,c
+				;
+EEE3 : 20 		" "		db	020H
+				;
+EEE4 : 6F 		"o"		mov	l,a
+EEE5 : 6E 		"n"		mov	l,m
+				;
+EEE6 : 20 		" "		db	020H
+				;
+EEE7 : 74 		"t"		mov	m,h
+EEE8 : 61 		"a"		mov	h,c
+EEE9 : 70 		"p"		mov	m,b
+EEEA : 65 		"e"		mov	h,l
+EEEB : 24 		"$"		inr	h
+				;
+EEEC : 20 		" "		db	020H
+EEED : 20 		" "		db	020H
+				;
+EEEE : 26 20 		"& "		mvi	h,020H
+EEF0 : 61 		"a"		mov	h,c
+EEF1 : 6E 		"n"		mov	l,m
+EEF2 : 79 		"y"		mov	a,c
+				;
+EEF3				LEEF3:
+EEF3 : 20 		" "		db	020H
+				;
+EEF4 : 6B 		"k"		mov	l,e
+EEF5 : 65 		"e"		mov	h,l
+EEF6 : 79 		"y"		mov	a,c
+				;
+EEF7 : 20 		" "		db	020H
+				;
+EEF8 : 6F 		"o"		mov	l,a
+EEF9 : 6E 		"n"		mov	l,m
+				;
+EEFA : 20 		" "		db	020H
+				;
+EEFB : 6B 		"k"		mov	l,e
+EEFC : 65 		"e"		mov	h,l
+EEFD : 79 		"y"		mov	a,c
+EEFE : 62 		"b"		mov	h,d
+EEFF : 6F 		"o"		mov	l,a
+EF00 : D5 		" "		push	d
+EF01 : E5 		" "		push	h
+EF02 : 21 C2 EE 	"!  "		lxi	h,0EEC2H
+EF05 : CD 2C EE 	" , "		call	LEE2C
+EF08 : 21 DE EE 	"!  "		lxi	h,0EEDEH
+EF0B : CD 3F EE 	" ? "		call	LEE3F
+EF0E : AF 		" "		xra	a
+EF0F : CD CD EF 	"   "		call	LEFCD
+EF12 : 1E 02 		"  "		mvi	e,002H
+EF14 : 3E E6 		"> "		mvi	a,0E6H
+EF16 : CD CD EF 	"   "		call	LEFCD
+EF19 : 21 56 EE 	"!V "		lxi	h,0EE56H
+EF1C : 06 03 		"  "		mvi	b,003H
+EF1E : 7E 		"~"		mov	a,m
+EF1F : CD D5 E5 	"   "		call	LE5D5
+EF22 : 21 C2 EE 	"!  "		lxi	h,0EEC2H
+EF25 : CD 2C EE 	" , "		call	LEE2C
+EF28 : 21 DE EE 	"!  "		lxi	h,0EEDEH
+EF2B : CD 3F EE 	" ? "		call	LEE3F
+EF2E				LEF2E:
+EF2E : AF 		" "		xra	a
+EF2F : CD CD EF 	"   "		call	LEFCD
+EF32 : 05 		" "		dcr	b
+EF33 : CA 8B EF 	"   "		jz	LEF8B
+EF36 : 23 		"#"		inx	h
+EF37 : FE 0D 		"  "		cpi	00DH
+EF39 : C2 2E EF 	" . "		jnz	LEF2E
+EF3C : AF 		" "		xra	a
+EF3D : 06 FF 		"  "		mvi	b,0FFH
+EF3F : CD D0 EF 	"   "		call	LEFD0
+EF42 : C1 		" "		pop	b
+EF43 : C9 		" "		ret
+				;
+EF44 : 06 21 		" !"		mvi	b,021H
+EF46 : 05 		" "		dcr	b
+EF47 : C2 E6 EF 	"   "		jnz	LEFE6
+EF4A : C9 		" "		ret
+				;
+EF4B : 20 		" "		db	020H
+EF4C : 20 		" "		db	020H
+EF4D : 20 		" "		db	020H
+EF4E : 20 		" "		db	020H
+EF4F : 20 		" "		db	020H
+				;
+EF50 : 53 		"S"		mov	d,e
+EF51 : 65 		"e"		mov	h,l
+EF52 : 70 		"p"		mov	m,b
+EF53 : 74 		"t"		mov	m,h
+EF54 : 65 		"e"		mov	h,l
+EF55 : 6D 		"m"		mov	l,l
+EF56 : 62 		"b"		mov	h,d
+EF57 : 65 		"e"		mov	h,l
+EF58 : 72 		"r"		mov	m,d
+EF59 : 2F 		"/"		cma
+EF5A : 32 36 2F 	"26/"		sta	X2F36
+				;
+EF5D : 38 		"8"		db	038H
+				;
+EF5E : 39 		"9"		dad	sp
+				;
+EF5F : 20 		" "		db	020H
+				;
+EF60 : D0 		" "		rnc
+EF61 : EF 		" "		rst	5
+EF62 : C1 		" "		pop	b
+EF63 : C9 		" "		ret
+				;
+EF64 : 06 21 		" !"		mvi	b,021H
+EF66 : 46 		"F"		mov	b,m
+EF67 : C2 C1 EF 	"   "		jnz	LEFC1
+EF6A : 4B 		"K"		mov	c,e
+EF6B : 29 		")"		dad	h
+EF6C : B0 		" "		ora	b
+EF6D : C0 		" "		rnz
+EF6E : 60 		"`"		mov	h,b
+EF6F : EF 		" "		rst	5
+EF70 : 5D 		"]"		mov	e,l
+EF71				LEF71:
+EF71 : CD 71 EF 	" q "		call	LEF71
+EF74 : 7C 		"|"		mov	a,h
+EF75 : CD CD EF 	"   "		call	LEFCD
+EF78 : AF 		" "		xra	a
+EF79 : 67 		"g"		mov	h,a
+EF7A : 6F 		"o"		mov	l,a
+EF7B : CD 38 FA 	" 8 "		call	LFA38
+EF7E : 1E 01 		"  "		mvi	e,001H
+EF80 : D5 		" "		push	d
+EF81 : E5 		" "		push	h
+EF82 : 21 C2 EE 	"!  "		lxi	h,0EEC2H
+EF85 : CD 2C EE 	" , "		call	LEE2C
+EF88 : 21 DE EE 	"!  "		lxi	h,0EEDEH
+EF8B				LEF8B:
+EF8B : CD 3F EE 	" ? "		call	LEE3F
+EF8E : AF 		" "		xra	a
+EF8F : CD CD EF 	"   "		call	LEFCD
+				;
+EF92 : 1E 		" "		db	01EH
+EF93				LEF93:
+EF93 : 02 		" "		db	002H
+				;
+EF94 : 3E E6 		"> "		mvi	a,0E6H
+EF96 : CD CD EF 	"   "		call	LEFCD
+EF99 : 21 56 EE 	"!V "		lxi	h,0EE56H
+EF9C : 06 03 		"  "		mvi	b,003H
+EF9E : 7E 		"~"		mov	a,m
+EF9F : CD D5 E5 	"   "		call	LE5D5
+EFA2 : 21 C2 EE 	"!  "		lxi	h,0EEC2H
+EFA5 : CD 2C EE 	" , "		call	LEE2C
+EFA8 : 21 DE EE 	"!  "		lxi	h,0EEDEH
+EFAB : CD 3F EE 	" ? "		call	LEE3F
+EFAE : AF 		" "		xra	a
+EFAF : CD CD EF 	"   "		call	LEFCD
+EFB2 : 05 		" "		dcr	b
+EFB3 : CA 8B EF 	"   "		jz	LEF8B
+EFB6 : 23 		"#"		inx	h
+EFB7 : FE 0D 		"  "		cpi	00DH
+EFB9 : C2 2E EF 	" . "		jnz	LEF2E
+EFBC : AF 		" "		xra	a
+EFBD : 06 FF 		"  "		mvi	b,0FFH
+				;
+EFBF : CD 		" "		db	0CDH
+				;
+EFC0 : D0 		" "		rnc
+				;
+EFC1				LEFC1:
+EFC1 : EF 		" "		db	0EFH
+				;
+EFC2 : C1 		" "		pop	b
+EFC3 : C9 		" "		ret
+				;
+EFC4 : 06 21 		" !"		mvi	b,021H
+EFC6 : 05 		" "		dcr	b
+EFC7 : C2 E6 EF 	"   "		jnz	LEFE6
+EFCA : C9 		" "		ret
+				;
+EFCB : 20 		" "		db	020H
+EFCC : 20 		" "		db	020H
+EFCD				LEFCD:
+EFCD : 20 		" "		db	020H
+EFCE : 20 		" "		db	020H
+EFCF : 20 		" "		db	020H
+				;
+EFD0				LEFD0:
+EFD0 : 53 		"S"		mov	d,e
+EFD1 : 65 		"e"		mov	h,l
+EFD2 : 70 		"p"		mov	m,b
+EFD3 : 74 		"t"		mov	m,h
+EFD4 : 65 		"e"		mov	h,l
+EFD5 : 6D 		"m"		mov	l,l
+EFD6 : 62 		"b"		mov	h,d
+EFD7 : 65 		"e"		mov	h,l
+EFD8 : 72 		"r"		mov	m,d
+EFD9 : 2F 		"/"		cma
+EFDA : 32 36 2F 	"26/"		sta	X2F36
+				;
+EFDD : 38 		"8"		db	038H
+				;
+EFDE : 39 		"9"		dad	sp
+				;
+EFDF : 20 		" "		db	020H
+				;
+EFE0 : D0 		" "		rnc
+EFE1 : EF 		" "		rst	5
+EFE2 : C1 		" "		pop	b
+EFE3 : C9 		" "		ret
+				;
+EFE4 : 06 21 		" !"		mvi	b,021H
+EFE6				LEFE6:
+EFE6 : 05 		" "		dcr	b
+EFE7 : C2 E6 EF 	"   "		jnz	LEFE6
+EFEA : C9 		" "		ret
+				;
+EFEB : 20 		" "		db	020H
+EFEC : 20 		" "		db	020H
+EFED : 20 		" "		db	020H
+EFEE : 20 		" "		db	020H
+EFEF : 20 		" "		db	020H
+				;
+EFF0 : 53 		"S"		mov	d,e
+EFF1 : 65 		"e"		mov	h,l
+EFF2 : 70 		"p"		mov	m,b
+EFF3 : 74 		"t"		mov	m,h
+EFF4 : 65 		"e"		mov	h,l
+EFF5 : 6D 		"m"		mov	l,l
+EFF6 : 62 		"b"		mov	h,d
+EFF7 : 65 		"e"		mov	h,l
+EFF8 : 72 		"r"		mov	m,d
+EFF9 : 2F 		"/"		cma
+EFFA : 32 36 2F 	"26/"		sta	X2F36
+				;
+EFFD : 38 		"8"		db	038H
+				;
+EFFE : 39 		"9"		dad	sp
+				;
+EFFF : 20 		" "		db	020H
+
+;--------------------------------------------------------------
+Symbol table
+============
+
+Value	Type	Name
+-----	----	----
+0000	 04	L0000
+0008	 04	L0008
+0010	 04	L0010
+0011	 04	L0011
+0028	 04	L0028
+0038	 04	L0038
+00D6	 04	L00D6
+0102	 04	X0102
+0249	 04	X0249
+024B	 04	X024B
+024D	 04	X024D
+0251	 04	X0251
+0252	 04	X0252
+0253	 04	X0253
+0255	 04	X0255
+0257	 04	X0257
+0259	 04	X0259
+0300	 04	X0300
+0FDA	 04	L0FDA
+1312	 04	L1312
+15CD	 04	L15CD
+2036	 04	X2036
+21E5	 04	L21E5
+22D5	 04	L22D5
+23EB	 04	X23EB
+2F36	 04	X2F36
+3AF5	 04	L3AF5
+490F	 04	L490F
+5C21	 04	L5C21
+6976	 04	L6976
+7AC0	 04	L7AC0
+8153	 04	L8153
+B81A	 04	LB81A
+C82D	 04	XC82D
+C836	 04	XC836
+C837	 04	XC837
+C9B0	 04	XC9B0
+C9B2	 04	XC9B2
+C9B4	 04	XC9B4
+C9B6	 04	XC9B6
+C9B8	 04	XC9B8
+C9BA	 04	XC9BA
+CDC9	 04	LCDC9
+CDEF	 04	LCDEF
+D354	 04	LD354
+D3F8	 04	LD3F8
+D781	 04	LD781
+D906	 04	LD906
+D911	 04	LD911
+D915	 04	LD915
+D9B2	 04	XD9B2
+DC55	 04	LDC55
+DF99	 04	LDF99
+E1D6	 04	LE1D6
+E2B4	 04	LE2B4
+E2C0	 04	LE2C0
+E2CC	 04	LE2CC
+E2CF	 04	LE2CF
+E400	 04	LE400
+E406	 04	LE406
+E409	 04	LE409
+E467	 04	LE467
+E492	 04	LE492
+E52F	 04	LE52F
+E537	 04	LE537
+E544	 04	LE544
+E547	 04	LE547
+E555	 04	LE555
+E5D5	 04	LE5D5
+E794	 04	LE794
+E83F	 04	LE83F
+E84E	 04	LE84E
+E857	 04	LE857
+E88C	 04	LE88C
+E8A1	 04	LE8A1
+E8A7	 04	LE8A7
+E955	 04	LE955
+E982	 04	LE982
+E9D6	 04	LE9D6
+EA22	 04	LEA22
+EA2D	 04	LEA2D
+EA74	 04	LEA74
+EABE	 04	LEABE
+EAF5	 04	LEAF5
+EB1B	 04	LEB1B
+EB63	 04	LEB63
+EB77	 04	LEB77
+EB7D	 04	LEB7D
+EBCA	 04	LEBCA
+EBE5	 04	LEBE5
+EBF6	 04	LEBF6
+EC09	 04	LEC09
+EC0B	 04	LEC0B
+EC18	 04	LEC18
+ECA3	 04	LECA3
+ECF3	 04	LECF3
+ECFA	 04	LECFA
+ECFB	 04	LECFB
+ED01	 04	LED01
+ED16	 04	LED16
+ED43	 04	LED43
+ED68	 04	LED68
+ED78	 04	LED78
+ED95	 04	LED95
+EDA8	 04	LEDA8
+EDF1	 04	LEDF1
+EE00	 04	LEE00
+EE06	 04	LEE06
+EE21	 04	LEE21
+EE2C	 04	LEE2C
+EE3F	 04	LEE3F
+EEF3	 04	LEEF3
+EF2E	 04	LEF2E
+EF71	 04	LEF71
+EF8B	 04	LEF8B
+EF93	 04	LEF93
+EFC1	 04	LEFC1
+EFCD	 04	LEFCD
+EFD0	 04	LEFD0
+EFE6	 04	LEFE6
+F7FD	 04	LF7FD
+F971	 04	LF971
+F9A0	 04	LF9A0
+F9F3	 04	LF9F3
+FA22	 04	LFA22
+FA38	 04	LFA38
+FA45	 04	LFA45
+FB51	 04	LFB51
+
+Number of symbols:			128
+
+;--------------------------------------------------------------
