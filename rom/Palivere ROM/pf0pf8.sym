@@ -37,101 +37,101 @@ code		0xC000	Boot1
 ; code		0xF454	ColdStart
 ; code		0xD000	Basic
 
-code		0xDCE9	GetY_N		; loe s¸mbol, kontrolli, kas on Y vıi N (NC)
+code		0xDCE9	GetY_N		; loe s√ºmbol, kontrolli, kas on Y v≈ëi N (NC)
 
 ; code		0xF0AC	MonCmdParser
 
 ; Monitor entry points
-; s¸mboli sisestamise ja v‰ljastamise muudetavad aadressid
-code		0xC7F0	OutVec	;A: v‰ljastatav s¸mbol
-code		0xC7F3	InVec	;tagasi: A=loetud s¸mbol
-; nende vaikimisi v‰‰rtused, lugemine klaviatuurilt, v‰ljastamine ekraanile
-code		0xF81C	COut@	;A: v‰ljastatav s¸mbol
-code		0xFA45	RdKey@	;tagasi: A=loetud s¸mbol
+; s√ºmboli sisestamise ja v√§ljastamise muudetavad aadressid
+code		0xC7F0	OutVec	;A: v√§ljastatav s√ºmbol
+code		0xC7F3	InVec	;tagasi: A=loetud s√ºmbol
+; nende vaikimisi v√§√§rtused, lugemine klaviatuurilt, v√§ljastamine ekraanile
+code		0xF81C	COut@	;A: v√§ljastatav s√ºmbol
+code		0xFA45	RdKey@	;tagasi: A=loetud s√ºmbol
 
 code		0xFB03	Scroll1	;siia tuleb, kui viimasel real tehakse reavahetus
 
 ; klaviatuuri ja ekraani asjad
 ; code		0xFB94	KBStat	;tagasi A=FF, kui klahvi polnud vajutatud, muidu klahvi kood
-; code		0xFA59	GetChar	;n‰itab kursorit ja loeb s¸mboli klaviatuurilt
-code		0xF2E0	prNib	;A: tr¸kitav 1-kohaline arv
-code		0xF2D3	prByte	;A: tr¸kitav 2-kohaline arv
-code		0xF2CA	prAdr	;HL: tr¸kitav 4-kohaline arv
-code		0xF13E	prLine	;HL: rea algus, C: lıputunnus
-; code		0xF756	GetLnZ	;tr¸kib reavahetuse ja kukub GetLn-i
-code		0xF759	GetLn	;tr¸kib prompti (0xC80D) ja sisestab rea aadressile 0xC901
+; code		0xFA59	GetChar	;n√§itab kursorit ja loeb s√ºmboli klaviatuurilt
+code		0xF2E0	prNib	;A: tr√ºkitav 1-kohaline arv
+code		0xF2D3	prByte	;A: tr√ºkitav 2-kohaline arv
+code		0xF2CA	prAdr	;HL: tr√ºkitav 4-kohaline arv
+code		0xF13E	prLine	;HL: rea algus, C: l≈ëputunnus
+; code		0xF756	GetLnZ	;tr√ºkib reavahetuse ja kukub GetLn-i
+code		0xF759	GetLn	;tr√ºkib prompti (0xC80D) ja sisestab rea aadressile 0xC901
 code		0xF763	GetLn1	;sisestab rea aadressile 0xC901
 ; ekraanioperatsioonid
-code		0xF7B4	SetNor	; valged t‰hed mustal taustal
-code		0xF7B9	SetInv	; mustad t‰hed valgel taustal
+code		0xF7B4	SetNor	; valged t√§hed mustal taustal
+code		0xF7B9	SetInv	; mustad t√§hed valgel taustal
 ; code		0xF7BE	HTab	;A: veeru # (0...0x3F)
 ; code		0xF7DC	VTab	;A: rea # (0...0x18)
 
-code		0xF9A0	HomCl	; puhastab ekraani ja paneb kursori ¸les vasakule
-code		0xF9DA	Home	; paneb kursori ¸les vasakule
+code		0xF9A0	HomCl	; puhastab ekraani ja paneb kursori √ºles vasakule
+code		0xF9DA	Home	; paneb kursori √ºles vasakule
 
-; code		0xF942	NextLine	; l‰heb j‰rgmisele reale ? kas algusse?, skrollib vajadusel
+; code		0xF942	NextLine	; l√§heb j√§rgmisele reale ? kas algusse?, skrollib vajadusel
 code		0xF1C5	SetScr48	; ekraan 48-veeruliseks
 code		0xF1CA	SetScr64	; ekraan 64-veeruliseks
 
-; code		0xFB19	ScrlTxt		; liigutab ekraani tekstitımmist 1 rea vırra ¸les
-code		0xF971	prCRLF		; v‰ljastab ekraanile reavahetuse
-code		0xF976	prSpace		; kirjutab ekraanile t¸hiku
+; code		0xFB19	ScrlTxt		; liigutab ekraani tekstit≈ëmmist 1 rea v≈ërra √ºles
+code		0xF971	prCRLF		; v√§ljastab ekraanile reavahetuse
+code		0xF976	prSpace		; kirjutab ekraanile t√ºhiku
 code		0xF1BD	txtWidth	; vahetab 40- ja 64-veerulist ekraani
-code		0xF1B5	findNonSpc	; otsib HL j‰rgi esimest mittet¸hikut
-code		0xF1FB	doIn		; t‰idab monitori k‰su I (loeb pordist)
-code		0xF224	doOut		; t‰idab monitori k‰su IO (kirjutab porti)
-; code		0xF26B	makeInOut	; kirjutab aadressile 0xC7F6 k‰su (akumulaatorist) In xx vıi Out xx ja selle j‰rele RET.
+code		0xF1B5	findNonSpc	; otsib HL j√§rgi esimest mittet√ºhikut
+code		0xF1FB	doIn		; t√§idab monitori k√§su I (loeb pordist)
+code		0xF224	doOut		; t√§idab monitori k√§su IO (kirjutab porti)
+; code		0xF26B	makeInOut	; kirjutab aadressile 0xC7F6 k√§su (akumulaatorist) In xx v≈ëi Out xx ja selle j√§rele RET.
 					; Pordi nr. peab kuidagi teisiti saama baiti 0xC7F7
 byte		0xC7F7	portNo		; ... sinna see kirjutatakse
-code		0xF174	tapeWrite	; kirjutab makile m‰luosa ...
+code		0xF174	tapeWrite	; kirjutab makile m√§luosa ...
 code		0xF194	tapeRead	; loeb makilt faili aadressile ...
-code		0xF19A	tapeVfy		; vırdleb makilt faili aadressilega ...
+code		0xF19A	tapeVfy		; v≈ërdleb makilt faili aadressilega ...
 
-code		0xF082	doList		; v‰ljastab m‰luosa 8080 k‰skudena
-code		0xF000	doDump		; v‰ljastab m‰luosa 16-ndarvude ja ASCII s¸mbolitena
-code		0xF1F7	doGo		; alustab programmi t‰itmist aadressilt, mis on sınas 0xC812
-code		0xF2F2	doMove		; t‰idab monitori Move-k‰su
-code		0xF2F8	doVerify	; t‰idab monitori Verify-k‰su
+code		0xF082	doList		; v√§ljastab m√§luosa 8080 k√§skudena
+code		0xF000	doDump		; v√§ljastab m√§luosa 16-ndarvude ja ASCII s√ºmbolitena
+code		0xF1F7	doGo		; alustab programmi t√§itmist aadressilt, mis on s≈ënas 0xC812
+code		0xF2F2	doMove		; t√§idab monitori Move-k√§su
+code		0xF2F8	doVerify	; t√§idab monitori Verify-k√§su
 code		0xF1E5	doInText	; sisestab monitoris tekstijada
 
 code		0xFA02	mult64		; korrutab HL 64-ga
 
 code		0xFA22	doBeep		; piuksub
 
-code		0xFA38	wait		; ootab 56+(HL)*28 ts¸klit
+code		0xFA38	wait		; ootab 56+(HL)*28 ts√ºklit
 
-; code		0xF8B0	OutVisible	; tuleb Cout@-st, s¸mbol tuleb joonistada ekraanile
-; code		0xF903	Out48Col	; s¸mbol joonistatakse 48-veerulisele ekraanile
-code		0xFD24	Out64Col	; s¸mbol joonistatakse 64-veerulisele ekraanile
+; code		0xF8B0	OutVisible	; tuleb Cout@-st, s√ºmbol tuleb joonistada ekraanile
+; code		0xF903	Out48Col	; s√ºmbol joonistatakse 48-veerulisele ekraanile
+code		0xFD24	Out64Col	; s√ºmbol joonistatakse 64-veerulisele ekraanile
 
-; viimase alamm‰rgendid
+; viimase alamm√§rgendid
 code		0xFD4D	d0Is1		; veeru number on paaritu
 code		0xFD54	Col_00		; veeru number on 0,4,8,...
-; code		0xCD9A	Col_00_out	; 00-veeru joonistamine: 6 bitti kırgemateks, kokku m‰lust vıetud 2 madalama bitiga
+; code		0xCD9A	Col_00_out	; 00-veeru joonistamine: 6 bitti k≈ërgemateks, kokku m√§lust v≈ëetud 2 madalama bitiga
 ; code		0xCDB1	Col_01		; veeru number on 1,5,9,...
-; code		0xCDC8	Col_01_out	; 01-veeru joonistamine: 2 kırgemat bitti madalateks, kokku m‰lust vıetud 6 kırgema bitiga
-					; j‰rgmisse baiti 4 madalamat bitti kırgemateks, kokku m‰lust vıetud 4 madalama bitiga 
+; code		0xCDC8	Col_01_out	; 01-veeru joonistamine: 2 k≈ërgemat bitti madalateks, kokku m√§lust v≈ëetud 6 k≈ërgema bitiga
+					; j√§rgmisse baiti 4 madalamat bitti k≈ërgemateks, kokku m√§lust v≈ëetud 4 madalama bitiga 
 ; code		0xCDEF	Col_10		; veeru number on 2,6,A,...
-; code		0xCE07	Col_10_out	; 10-veeru joonistamine: 4 kırgemat bitti madalateks, kokku m‰lust vıetud 4 kırgema bitiga
-					; j‰rgmisse baiti 2 madalamat bitti kırgemateks, kokku m‰lust vıetud 6 madalama bitiga 
+; code		0xCE07	Col_10_out	; 10-veeru joonistamine: 4 k≈ërgemat bitti madalateks, kokku m√§lust v≈ëetud 4 k≈ërgema bitiga
+					; j√§rgmisse baiti 2 madalamat bitti k≈ërgemateks, kokku m√§lust v≈ëetud 6 madalama bitiga 
 ; code		0xCE2C	Col_11		; veeru number on 3,7,B,...
-; code		0xCE45	Col_11_out	; 11-veeru joonistamine: 6 bitti kokku m‰lust vıetud 2 kırgema bitiga
+; code		0xCE45	Col_11_out	; 11-veeru joonistamine: 6 bitti kokku m√§lust v≈ëetud 2 k≈ërgema bitiga
 
-; code		0xF9E4	ClrScr_2	; teise (v‰rvilise jaoks vajaliku) ekraanipiirkonna puhastamine
-; code		0xF9C2	QuickFill	; t‰idab (ekraanipiirkonna) magasini abil kehtiva Normal/Inverse v‰rviga
+; code		0xF9E4	ClrScr_2	; teise (v√§rvilise jaoks vajaliku) ekraanipiirkonna puhastamine
+; code		0xF9C2	QuickFill	; t√§idab (ekraanipiirkonna) magasini abil kehtiva Normal/Inverse v√§rviga
 
-; m‰lu sisu liigutamised
-code		0xF9F3	Move		;BC: l‰htekoha algus, HL: sihtkoha algus, DE: l‰htekoha lıpp + 1
+; m√§lu sisu liigutamised
+code		0xF9F3	Move		;BC: l√§htekoha algus, HL: sihtkoha algus, DE: l√§htekoha l≈ëpp + 1
 
-; code		0xCFF0	MovROM	;BC: l‰htekoha algus, HL: sihtkoha algus, DE: l‰htekoha lıpp + 1.
-;				 Saab kasutada C0-C8 ROMide opm‰llu kopeerimiseks.
+; code		0xCFF0	MovROM	;BC: l√§htekoha algus, HL: sihtkoha algus, DE: l√§htekoha l≈ëpp + 1.
+;				 Saab kasutada C0-C8 ROMide opm√§llu kopeerimiseks.
 
 code		0xF9EA	Fill	;B: sisu, HL: algus, DE: pikkus
 
 ; kassetikas
-; code		0xED4F	TSave		;0xC837: algus, 0xC839: lıpp, 0xC829: nimi (6 char)
-; code		0xEB7B	TRead		;0xC837: algus, 0xC839: lıpp, 0xC829: nimi (6 char)
+; code		0xED4F	TSave		;0xC837: algus, 0xC839: l≈ëpp, 0xC829: nimi (6 char)
+; code		0xEB7B	TRead		;0xC837: algus, 0xC839: l≈ëpp, 0xC829: nimi (6 char)
 ; kassetinduse alamprogrammid
 ; code		0xEE78	TLdError	;0xC446 = "Load error"
 ; code		0xEE7E	TVfError	;0xC452 = "Verify error"
@@ -142,13 +142,13 @@ code		0xF9EA	Fill	;B: sisu, HL: algus, DE: pikkus
 ; code		0xCBA8	CmpDEHL		; paneb Z-lipu
 code		0xFC50	CmpBCHL		; paneb Z-lipu
 
-; code		0xEE84	printROM1	; v‰ljastab ROM1-s oleva stringi (aadress HL-is, lıpetab '$')
+; code		0xEE84	printROM1	; v√§ljastab ROM1-s oleva stringi (aadress HL-is, l≈ëpetab '$')
 
-code		0xFB3B	fl_last		; t‰idab ekraani viimase rea N/I v‰rvi t¸hikutega
+code		0xFB3B	fl_last		; t√§idab ekraani viimase rea N/I v√§rvi t√ºhikutega
 ;
 
 ; BIOSi funktsioonid 
-; neid suunamisi (D0 alguses) on v‰he, vt. allpool 
+; neid suunamisi (D0 alguses) on v√§he, vt. allpool 
 ; code		0xD050	boot	;0xC9CC	-> 0xB200
 ; code		0xD06D	wboot	;0xC9CF	-> 0xB203
 ; code		0xE80F	constat	;0xC9D2	-> 0xB206
@@ -188,7 +188,7 @@ code		0xD275	sectran		;
 ;?
 code		0xD667	somewhere	;
 
-; BIOSi funktsioonid kopeerituna opm‰llu
+; BIOSi funktsioonid kopeerituna opm√§llu
 code		0xBE00	r_boot		;
 code		0xBE03	r_wboot		;
 code		0xBE06	r_constat		;
@@ -255,7 +255,7 @@ word		0xC0CC	dpb_OFF			; # of reserved tracks at beginning of logical disk
 ; D427 : 00 	db	000H	; CKS
 ; D428 : 02 	db	002H	; 
 ; D429 : 00 	db	000H	; OFF
-; D42A : FF 	db	0FFH	; t‰ide 10h rajale
+; D42A : FF 	db	0FFH	; t√§ide 10h rajale
 
 
 
@@ -287,21 +287,21 @@ word		0xC3F1	Conditions	0x08
 byte		0xFA09	rowAddr		0x19	; ridade asukohad graafikaekraanil
 
 
-; j‰rgmised on opm‰lu  jaoks
-byte		0xC803	b_smth		; k¸lmk‰ivitusel 0 (?)
-byte		0xC807	b_Column	; veeru # ekraanil (0 kuni 47 vıi 63)
+; j√§rgmised on opm√§lu  jaoks
+byte		0xC803	b_smth		; k√ºlmk√§ivitusel 0 (?)
+byte		0xC807	b_Column	; veeru # ekraanil (0 kuni 47 v≈ëi 63)
 byte		0xC808	b_Row		; rea # ekraanil (0 kuni 24)
 byte		0xC809	b_NormInv	; 0=Normal, FF = Inverse
 word		0xC80A	b_crsr		; kursori aadress tekstiekraanil (2 baiti)
-byte		0xC80D	b_prompt	; kutsungis¸mbol
+byte		0xC80D	b_prompt	; kutsungis√ºmbol
 
-word		0xC819	b_c_img		; t‰hepiltide algusaadress (2 baiti, standardselt 0xC100);
+word		0xC819	b_c_img		; t√§hepiltide algusaadress (2 baiti, standardselt 0xC100);
 
 byte		0xC821	b_ESCm		; FF: ESC-jada on aktiivne, 0: ei ole
 
 word		0xC825	booted		; "1234" if already switched on
 
-byte		0xC82C	s_width		; ekraani laius (48 vıi 64)
+byte		0xC82C	s_width		; ekraani laius (48 v≈ëi 64)
 
 string		0xC900	inBuf		0x0040	; ? ehk rohkem?
 
@@ -321,7 +321,7 @@ string		0xD404	t_d_r_i		0x12	; retry/ignore?
 
 string		0XDA5C	t_d_chg		0x45	; "Disk changed"
 
-; vırgu veateated?
+; v≈ërgu veateated?
 string		0xDDE6	t_d_rot		0xC	; R/O track
 string		0xDDF2	t_d_bc		0x11	; bad connection
 string		0xDE03	t_d_rod		0xB	; R/O disk
@@ -332,13 +332,13 @@ string		0xDE46	t_d_con		0x2C	; continue?
 string		0xDE72	t_d_mas		0x1F	; cannot connect w master
 string		0xDE91	t_d_cpn		0x1A	; t-cp-net
 
-byte		0xDEE8	t_empty		0x118	; m‰lu t¸hi lıpp
+byte		0xDEE8	t_empty		0x118	; m√§lu t√ºhi l≈ëpp
 
-byte		0xBE4E	d_netwrk		; positiivne, kui ketas, else vırk
-code		0xDEAB	bios_vec		; BIOSi suunamised, mis kopeeritakse opm‰llu @ 0x
+byte		0xBE4E	d_netwrk		; positiivne, kui ketas, else v≈ërk
+code		0xDEAB	bios_vec		; BIOSi suunamised, mis kopeeritakse opm√§llu @ 0x
 byte		0xDEE8	bv_end			; ... sinnani
 
-code		0xD186	mvbc2hl_de		; liigutab baite (BC) -> (HL) DE t¸kki
+code		0xD186	mvbc2hl_de		; liigutab baite (BC) -> (HL) DE t√ºkki
 
 ; E8 (Basicu) asjad
 string		0xE997	t_basic		0x12	; *** T-Basic ***
@@ -359,11 +359,4 @@ string		0xEFEB	t_date		0x15	; End of files
 
 string		0xF358	t_tere		0xBS	; Monitori tervitus
 
-
-
-
-
-
-; http://kboohk.com/cart/index.php?route=product/category&path=59
-; https://www.wordfast.net/wiki/Creating_Wordfast_Translation_Memory_in_WFC
 
