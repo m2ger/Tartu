@@ -8,7 +8,7 @@ aga ka tõsisemate ülesannete
 lahendamiseks. Mõeldud te-
 maga suhtlemiseks.
   Äraöeldult, suhtlemiseks
-arvutiga «Tartu»,
+arvutiga «Tartu».
 
 Kevadel kolm aastat tagasi
 loodi ülikoolis mikro-
@@ -27,7 +27,7 @@ sel. Järgnev aeg on kulunud
 riistvara veelgisele lihvimisele
 ming tarkvara väljatöötamise-
 le.
-  'Ons arvuti nüüd valmis?
+  Ons arvuti nüüd valmis?
   Sektorijuhataja Leo-Henn
 Humal: «Väikest viisi küll
 toodame, kuid arvame, et mõ-
@@ -42,7 +42,7 @@ sellesama arvuti peal töötame
 
 välja arvutit ennast, konst-
 rueerime näiteks elektron-
-skeemide trükkplante.»
+skeemide trükkplaate.»
   Millena arvutit kasutatakse?
   Leo-Henn Humal: «See ar-
 vuti on mõeldud ülikooli va-
@@ -50,7 +50,7 @@ jadusi rahuldama, Üldiselt
 oletasime juba varem, et ar-
 vuti peab lähemal ajal ka koo-
 li jõudma. Kuid missugust ar-
-vutit kooli  informaatikapro-
+vutit kooli informaatikapro-
 gramm täpselt nõuab, seda me
 veel ei tea. See on algus, ei
 julge ütelda, et just meie oma
@@ -67,7 +67,7 @@ korras õpib ja töötab neil üks
 rühm,  majandusküberneetika
 teiselt kursuselt. Siiski, pide-
 valt käivad ka mõned Nõo
-kooli õpilased,
+kooli õpilased.
   Järgmisel semestril peab
 koos Leningradi maantee uue
 hoonega avatama ka arvuti-
